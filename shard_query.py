@@ -2,8 +2,8 @@ import pymysql
 
 host = "127.0.0.1"
 port = 4000
-user = "root"
-password = ""
+user = "maxuser"
+password = "maxpwd"
 
 
 def print_result(res):
@@ -40,3 +40,4 @@ cursor = db.cursor()
 cursor.execute("select Zipcode from zipcodes_two.zipcodes_two order by Zipcode limit 1")
 results = cursor.fetchall()
 print_result(results)
+

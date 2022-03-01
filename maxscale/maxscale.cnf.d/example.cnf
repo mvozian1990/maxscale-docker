@@ -1,28 +1,28 @@
 [server1]
 type=server
-address=127.0.0.1
-port=4001
+address=master1
+port=3306
 protocol=MariaDBBackend
 
 [server2]
 type=server
-address=127.0.0.1
-port=4003
+address=master2
+port=3306
 protocol=MariaDBBackend
 
 [MariaDB-Monitor]
 type=monitor
 module=mariadbmon
 servers=server1,server2
-user=root
-passwd=
+user=maxuser
+password=maxpwd
 
 [Sharded-Service]
 type=service
 router=schemarouter
 servers=server1,server2
-user=root
-passwd=
+user=maxuser
+password=maxpwd
 
 [Shard-A-Listener]
 type=listener
